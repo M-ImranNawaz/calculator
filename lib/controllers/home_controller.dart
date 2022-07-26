@@ -59,7 +59,7 @@ class HomeController extends GetxController {
     if (!isOperator(value)) {
       calculate(initValue);
     }
-    inputValidations(value);
+    //inputValidations(value);
     if (value == "=") {
       inputSize.value = 30;
       outputSize.value = 40;
@@ -97,6 +97,9 @@ class HomeController extends GetxController {
       handleDotInput(value);
     } else {
       inp.value = initValue + value;
+      
+      calculate(inp.value);
+    
     }
   }
 
