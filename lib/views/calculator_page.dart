@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
-import '../controllers/home_controller.dart';
+import '../controllers/calculator_controller.dart';
 import 'views.dart';
 
-class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
+class CalculatorPage extends StatelessWidget {
+  CalculatorPage({Key? key}) : super(key: key);
   final HomeController c = Get.put(HomeController());
   var orientation;
   @override
@@ -16,7 +16,9 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: Container(
           alignment: Alignment.center,
-          padding: orientation == Orientation.portrait ? EdgeInsets.all(20) : EdgeInsets.zero,
+          padding: orientation == Orientation.portrait
+              ? const EdgeInsets.all(20)
+              : EdgeInsets.zero,
           child: orientation == Orientation.portrait
               ? Column(
                   mainAxisAlignment: MainAxisAlignment.end,
