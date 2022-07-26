@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: Container(
           alignment: Alignment.center,
-          padding: const EdgeInsets.all(20),
+          padding: orientation == Orientation.portrait ? EdgeInsets.all(20) : EdgeInsets.zero,
           child: orientation == Orientation.portrait
               ? Column(
                   mainAxisAlignment: MainAxisAlignment.end,
