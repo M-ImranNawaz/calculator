@@ -13,15 +13,6 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     orientation = MediaQuery.of(context).orientation;
     return Scaffold(
-      appBar: orientation == Orientation.portrait
-          ? AppBar(
-              title: const Text('Calculator'),
-              centerTitle: true,
-              backgroundColor: Colors.transparent,
-              elevation: 0,
-            )
-          : const PreferredSize(
-              preferredSize: Size(0, 0), child: SizedBox.shrink()),
       body: SafeArea(
         child: Container(
           alignment: Alignment.center,

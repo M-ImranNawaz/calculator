@@ -59,11 +59,11 @@ class HomeController extends GetxController {
     if (!isOperator(value)) {
       calculate(initValue);
     }
-    //inputValidations(value);
     if (value == "=") {
       inputSize.value = 30;
       outputSize.value = 40;
       calculate(inp.value);
+      inp.value = ans.value;
     } else if (value == "Del") {
       //Delete
       deleteAtLast();
@@ -97,9 +97,8 @@ class HomeController extends GetxController {
       handleDotInput(value);
     } else {
       inp.value = initValue + value;
-      
+
       calculate(inp.value);
-    
     }
   }
 
@@ -108,23 +107,6 @@ class HomeController extends GetxController {
       return false;
     }
     return true;
-  }
-
-  inputValidations(String value) {
-    // inp.value;
-
-    // if (inp.value.length > 2) {
-    //   var f = NumberFormat("###,###", "en_US");
-    //   print(f.format(int.parse(inp.value)));
-    //   inp.value = f.format(int.parse(inp.value));
-    // }
-    // final numberDigits = List.from(initValue.split(''));
-    // print(numberDigits);
-    // for (int i = 0; i < numberDigits.length; i++) {
-
-    //   inp.value = inp.value+ numberDigits[i];
-
-    // }
   }
 
   calculate(String exp) {
